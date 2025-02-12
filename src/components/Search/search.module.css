@@ -1,0 +1,28 @@
+.searchForm {
+  width: clamp(280px, 80vw, 626px);
+  height: 64px;
+  padding: 19px 25px;
+  color: rgba(101, 110, 194, 1);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+  box-shadow: 0px 7px 12px 0px rgba(100, 100, 111, 0.2);
+  border: none;
+}
+
+.searchForm::placeholder {
+  color: inherit;
+}
+
+.searchForm:focus {
+  outline: 2px solid currentColor;
+}
+
+@media (max-width: 576px) {
+  .searchForm {
+    height: 50px;
+    padding: 12px 15px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,46 @@
+@import url("./styles/reset.css");
+@import url("./styles/fonts.css");
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 128px 20px;
+  font-family: "FiraSans", sans-serif;
+  font-weight: 700;
+}
+
+.alive {
+  font-weight: 700;
+  color: rgba(38, 117, 4, 1);
+}
+
+.dead {
+  font-weight: 700;
+  color: rgba(130, 10, 10, 1);
+}
+
+.unknown {
+  font-weight: 700;
+  color: rgb(193, 193, 13);
+}
+
+.loading {
+  width: 200px;
+  height: 200px;
+  background-image: url("./assets/rick-and-morty.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: rick-move 2s infinite linear;
+  transform-origin: center;
+}
+
+@keyframes rick-move {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,61 @@
+.card {
+  display: flex;
+  gap: 30px;
+  font-size: 24px;
+  padding: 10px;
+  border: 2px solid rgba(101, 110, 194, 1);
+  border-radius: 15px;
+  font-weight: 400;
+}
+
+.photo {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.textInfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.categoryValue {
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+
+@media (max-width: 1000px) {
+  .card {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .photo {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .photo {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .photo {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 350px) {
+  .photo {
+    width: 270px;
+    height: 270px;
+  }
+}
