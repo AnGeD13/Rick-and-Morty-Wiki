@@ -1,8 +1,45 @@
-# React + Vite
+# Rick and Morty wiki app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ссылка на сайт: https://anged13.github.io/Rick-and-Morty-Wiki/
 
-Currently, two official plugins are available:
+## Установка и запуск
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Клонируйте репозиторий
+
+2. Установите зависимости: ```npm install```
+
+3. Запустите проект: ```npm run dev```
+
+## Стек технологий
+
+- React.js
+- React Router
+- JavaScript
+- CSS Modules
+- Vite
+- HTML
+
+## Структура проекта
+
+Папки:
+ - fonts - скачанные шрифты в формате woff2.
+ - styles - основные стили: подключение шрифтов и обнуление стилей по умолчанию.
+ - utils - функции и константы.
+ - assets - картинка, используемая для иконки сайта и заглушки, необходимой во время ожидания получения данных.
+
+
+Весь код разбит на компоненты. Папка компонента состоит из самого компонента и его стилей. 
+
+Основная точка входа для изучения кода это App.jsx.
+
+**App.jsx:** содержит маршруты.
+
+**SearchPage.jsx:** содержит форму с полем ввода (Search.jsx) и список карточек персонажей (CharacterCard.jsx). Каждая из карточек является ссылкой на страницу с более подробной информацией о персонаже.
+
+ Обычно при переходе на другую страницу, в данном случае со страницы с поиском на страницу о персонаже, данные на первой странице не сохраняются. Для решения этой проблемы значение из формы ввода сохраняется в sessionStorage.
+
+Также в этом компоненте обрабатываются случаи, когда в API нет совпадений с введённым текстом и если данные грузятся очень долго.
+
+**CharacterPage.jsx:** помимо подробной информации о персонаже содержит поле URL, при клике на которое происходит переход (на новую вкладку) на страницу из API, из которой и берутся основные данные для этого компонента.
+
+Аналогично SearchPage используется заглушка во время ожидания получения данных.
