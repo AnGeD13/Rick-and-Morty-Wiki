@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.form {
+  margin-bottom: 10px;
+}
+
 .cards {
   display: flex;
   justify-content:center;
