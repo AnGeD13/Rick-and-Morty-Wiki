@@ -58,7 +58,7 @@ export default function SearchPage() {
           value={searchValue}
           handleSearchChange={handleSearchChange}
         />
-        {searchValue && characters &&
+        {characters.length > 0 &&
           <p className={styles.found}>Found characters: {characters.length}</p>
         }
       </form>
